@@ -1,12 +1,13 @@
 package greetings
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 
 	"math/rand"
 	"time"
 )
+
 // Hello returns a greeting for the named person.
 func Hello(name string) (string, error) {
 	// If no name was given, return an error with a message.
@@ -15,7 +16,8 @@ func Hello(name string) (string, error) {
 	}
 	// If an name was received, return a value that embeds the name
 	// in a greeting message.
-	message := fmt.Sprintf(randomFormat(), name)
+	// message := fmt.Sprintf(randomFormat(), name)
+	message := fmt.Sprint(randomFormat(), name)
 	return message, nil
 }
 
@@ -30,7 +32,7 @@ func Hellos(names []string) (map[string]string, error) {
 		if err != nil {
 			return nil, err
 		}
-		// In the map, associate the retrieved message with 
+		// In the map, associate the retrieved message with
 		// the name.
 		messages[name] = message
 	}
@@ -48,7 +50,7 @@ func randomFormat() string {
 	// A slice of message formats.
 	formats := []string{
 		"Hi, %v. Welcome!",
-		"Great to see you, %v!", 
+		"Great to see you, %v!",
 		"Hail, %v! Well met!",
 	}
 

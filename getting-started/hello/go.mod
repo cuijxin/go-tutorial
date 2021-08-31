@@ -4,4 +4,4 @@ go 1.16
 
 replace example.com/greetings => ../greetings
 
-require example.com/greetings v0.0.0-00010101000000-000000000000
+require github.com/cuijxin/go-tutorial/getting-started/greetings v0.0.0-20210831011947-1b61d725b03e
